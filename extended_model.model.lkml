@@ -12,7 +12,7 @@ explore: order_items_extended {
   view_name: order_items
   from: order_items
   join: inventory_items {
-    relationship: one_to_many
+    relationship: many_to_one
     type: left_outer
     sql_on: ${inventory_items.id} = ${order_items.inventory_item_id} ;;
   }
