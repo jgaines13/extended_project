@@ -7,7 +7,7 @@ include: "/let_s_break/*.view"
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
 #
-explore: order_items_extended {
+explore: order_items_extended_broke{
   extends: [order_items]
   view_name: order_items
   from: order_items
