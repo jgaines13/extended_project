@@ -7,13 +7,19 @@ include: "/let_s_break/*.view"
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
 #
+
 explore: order_items_extended {
   extends: [order_items]
   view_name: order_items
   from: order_items
   join: inventory_items {
-    relationship: many_to_one
+    relationship: one_to_many
     type: left_outer
     sql_on: ${inventory_items.id} = ${order_items.inventory_item_id} ;;
+   }
+   join: orders_extended {
+    fields: [orders_extended.limitfields*]
+    relationship: many_to_one
+    sql_on: ${orders_extended.id} = ${order_items.order_id} ;;
   }
 }
