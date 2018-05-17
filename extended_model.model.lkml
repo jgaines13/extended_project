@@ -8,7 +8,8 @@ include: "/let_s_break/*.view"
 # # and define the joins that connect them together.
 #
 
-explore: order_items_extended {
+
+explore: order_items_extended_broke2 {
   extends: [order_items]
   view_name: order_items
   from: order_items
