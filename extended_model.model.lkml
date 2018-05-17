@@ -9,7 +9,7 @@ include: "/let_s_break/*.view"
 #
 
 
-explore: order_items_extended_broke2 {
+explore: order_items_extended_broke {
   extends: [order_items]
   view_name: order_items
   from: order_items
